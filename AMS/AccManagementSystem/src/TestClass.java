@@ -72,5 +72,34 @@ class TestClass {
 		
 	}
 	
+	@Test 
+	public void TransferTest1()
+	{
+		SavingAccount S1 = new SavingAccount();
+		SavingAccount S2 = new SavingAccount();
+		boolean temp;
+		S1.DepositCash(270000);
+		temp=S1.TransferCash(S2, 3000);
+		assertEquals(true, temp);
+	}
+	
+	@Test 
+	public void TransferTest2()
+	{
+		SavingAccount S1 = new SavingAccount();
+		SavingAccount S2 = new SavingAccount();
+		boolean temp;
+		S1.DepositCash(200);
+		temp=S1.TransferCash(S2, 3000);
+		assertNotEquals(true, temp);	
+	}
+	
+	@Test
+	public void Transfertest3()
+	{
+		
+	}
+	
+	
 	
 }
